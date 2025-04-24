@@ -1,103 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta Oceânica</title>
+    <title>Páginas com Efeito Hover</title>
+    <body style="background-image: url(Imagem-de-fundo.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <h1 style="text-align: center; color: white;">Navegação com Efeito Hover</h1>
+        <p style="text-align: center; color: white;">Passe o mause nos botões abaixo para vericar o efeito</p>
+        
+    </body>
     <style>
-        .carta-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        nav {
+            max-width: fit-content;
+            margin: 20px auto;
+        }
+
+        
+        nav > ul {
+            list-style: none;
             padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            gap: 15px;
+            border-radius: 15px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
         }
 
-        .carta {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            padding: 40px;
-            max-width: 600px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        nav li {
             position: relative;
-            border: 2px solid #1a759f;
-            font-family: 'Arial', sans-serif;
         }
 
-        .carta::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 30px;
-            background: #1a759f;
-            border-radius: 5px;
-        }
-
-        .carta-titulo {
-            color: #1a759f;
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .carta-mensagem {
-            line-height: 1.6;
-            font-size: 1.1em;
+       
+        nav li > a {
+            text-decoration: none;
             color: #333;
-            text-align: justify;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
-        .carta-assinatura {
-            margin-top: 30px;
-            text-align: right;
-            font-style: italic;
-            color: #1a759f;
-            font-weight: bold;
+        
+        nav li:nth-child(1) > a:hover {
+            background-color: #ff6b6b;
+            color: white;
         }
 
-        .selo {
-            position: absolute;
-            bottom: -30px;
-            right: -30px;
-            width: 80px;
-            opacity: 0.8;
+        nav li:nth-child(2) > a:hover {
+            background-color: #4ecdc4;
+            color: white;
+        }
+
+        nav li:nth-child(3) > a:hover {
+            background-color: #45b7d1;
+            color: white;
         }
     </style>
 </head>
-
-<body >
-   
-    <div class="carta-container">
-        <div class="carta">
-            <h2 class="carta-titulo">Mensagem dos Oceanos</h2>
-            <p class="carta-mensagem">
-                Caros seres humanos,<br>
-
-                Os mares clamam por ajuda. Cada onda que quebra na praia traz consigo um pedido de socorro.
-                As criaturas majestosas que habitam estas águas, como a grandiosa baleia-azul e e muitas outras, dependem de nossas ações
-                hoje para garantir seu amanhã.<br>
-
-                Pequenas mudanças fazem grandes diferenças:<br>
-                - Reduza o uso de plásticos <br>
-                - Apoie práticas de pesca sustentáveis<br>
-                - Conscientize-se e conscientize outros ,<br>
-
-                Juntos podemos ser a maré que transforma o destino de nossos oceanos. Que nossas ações hoje ecoem nas
-                profundezas como um canto de esperança para todas as criaturas marinhas.
-            </p>
-            <p class="carta-assinatura">
-                Com respeito,<br>
-                Todas as criaturas marinhas
-            </p>
-            
-        </div>
-    </div>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#pag1">Página 1</a></li>
+            <li><a href="#pag2">Página 2</a></li>
+            <li><a href="#pag3">Página 3</a></li>
+        </ul>
+    </nav>
 </body>
-
 </html>
